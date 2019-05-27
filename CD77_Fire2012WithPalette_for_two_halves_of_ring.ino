@@ -4,7 +4,7 @@
 // https://github.com/FastLED/FastLED/blob/master/examples/Fire2012WithPalette/Fire2012WithPalette.ino
 
 /* ===== Note ==========
- Change line 78 to pick color of the flame
+ Change line 83 to pick color of the flame
  Change lines 129 and 134 to adjust the flame.
 
 */
