@@ -14,10 +14,10 @@
 #define LED_PIN    6
 //#define COLOR_ORDER GRB
 #define CHIPSET    NEOPIXEL// WS2812B
-#define NUM_LEDS    72
+#define NUM_LEDS    24
 
-#define BRIGHTNESS  60
-#define FRAMES_PER_SECOND 80
+#define BRIGHTNESS  200
+#define FRAMES_PER_SECOND 20
 
 bool gReverseDirection = false;
 
@@ -80,7 +80,7 @@ void loop()
   // Add entropy to random number generator; we use a lot of it.
   random16_add_entropy( random(0,65535));
 
-  int palette_choice = 1; // set this to 0 for a red flame and to 1 for a blue flame.
+  int palette_choice = 0; // set this to 0 for a red flame and to 1 for a blue flame.
 
     switch (palette_choice){ 
     case 0: gPal = HeatColors_p; break;
@@ -126,12 +126,12 @@ void loop()
 // COOLING: How much does the air cool as it rises?
 // Less cooling = taller flames.  More cooling = shorter flames.
 // Default 55, suggested range 20-100 
-#define COOLING  75
+#define COOLING  35
 
 // SPARKING: What chance (out of 255) is there that a new spark will be lit?
 // Higher chance = more roaring fire.  Lower chance = more flickery fire.
 // Default 120, suggested range 50-200.
-#define SPARKING 90
+#define SPARKING 50
 
 
 void Fire2012WithPalette()
